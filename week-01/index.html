@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketplace de Artesanías Colombianas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Botón de tema -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+
+    <!-- Tarjeta -->
+    <div class="card">
+
+      <!-- Header -->
+      <div class="card-header">
+        <div class="avatar">
+          <img
+            src="https://images.unsplash.com/photo-1603575448369-3b3f5a2b1e4d?q=80&w=400"
+            alt="Artesanías colombianas"
+          />
+        </div>
+
+        <div class="header-info">
+          <h1 id="userName">Cargando...</h1>
+          <p class="location" id="userLocation">📍 Cargando...</p>
+        </div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="card-section">
+        <h2>Sobre el marketplace</h2>
+        <p id="userBio" class="bio">Cargando...</p>
+      </div>
+
+      <!-- Contacto -->
+      <div class="card-section">
+        <h2>Contacto</h2>
+
+        <div class="contact-item">
+          <span>📧</span>
+          <span id="userEmail">Cargando...</span>
+          <button id="copyEmailBtn" class="btn">Copiar</button>
+        </div>
+
+        <div class="contact-item">
+          <span>📱</span>
+          <span id="userPhone">Cargando...</span>
+          <button id="copyPhoneBtn" class="btn">Copiar</button>
+        </div>
+      </div>
+
+      <!-- Categorías -->
+      <div class="card-section">
+        <h2>Categorías destacadas</h2>
+        <div id="itemsList"></div>
+        <button id="toggleItemsBtn" class="btn btn-full">Mostrar más</button>
+      </div>
+
+      <!-- Links -->
+      <div class="card-section">
+        <h2>Explorar</h2>
+        <div id="linksContainer" class="social-links"></div>
+      </div>
+
+      <!-- Stats -->
+      <div class="card-section">
+        <h2>Impacto</h2>
+        <div id="statsContainer" class="stats-grid"></div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>E-commerce & Retail de artesanías colombianas 🇨🇴</p>
+    </footer>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

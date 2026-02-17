@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧵 Marketplace de Artesanías Colombianas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <h1>🧵 Marketplace de Artesanías Colombianas</h1>
+      <p class="subtitle">Gestión de productos artesanales</p>
+      <div class="stats-summary">
+        <span class="stat">Total Productos: <strong id="stat-total">0</strong></span>
+        <span class="stat">Disponibles: <strong id="stat-active">0</strong></span>
+        <span class="stat">Agotados: <strong id="stat-inactive">0</strong></span>
+      </div>
+    </header>
+
+    <section class="form-section">
+      <h2>➕ Nuevo Producto Artesanal</h2>
+      <form id="item-form">
+        <input type="hidden" id="item-id">
+
+        <div class="form-group">
+          <label>Nombre del Producto *</label>
+          <input type="text" id="item-name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Descripción</label>
+          <textarea id="item-description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Categoría</label>
+          <select id="item-category">
+            <option value="wayuu">👜 Wayuu</option>
+            <option value="ceramica">🏺 Cerámica</option>
+            <option value="tejido">🧶 Tejido</option>
+            <option value="madera">🪵 Madera</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Disponibilidad</label>
+          <select id="item-priority">
+            <option value="low">Disponible</option>
+            <option value="medium">Stock Medio</option>
+            <option value="high">Pocas Unidades</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Precio (COP)</label>
+          <input type="number" id="item-amount">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar Producto</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>📦 Productos</h2>
+      <div id="item-list"></div>
+      <div id="empty-state" style="display:none;">
+        No hay productos registrados
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
